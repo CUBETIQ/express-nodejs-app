@@ -1,2 +1,5 @@
-# express-nodejs-app
+# Express Nodejs App
+
+### Contributors
+- Sambo Chea <sombochea@cubetiqs.com>
 
