@@ -4,12 +4,13 @@ name: ci
 
 steps:
     - name: submodules
-      image: alpine/git
+      image: d.ctdn.net/alpine/git
       commands:
           - git submodule update --init --recursive
     - name: build
       image: d.ctdn.net/node
       commands:
           - yarn config set registry https://r.ctdn.net
-          - yarn
+          - cd packages/ts-common && yarn
+          - cd ../../ && yarn
           - yarn build
