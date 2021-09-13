@@ -11,6 +11,6 @@ steps:
       image: d.ctdn.net/node
       commands:
           - yarn config set registry https://r.ctdn.net
-          - cd packages/ts-common && yarn
+          - cd packages/ts-common && yarn && yarn build
           - cd ../../ && yarn
           - yarn build
