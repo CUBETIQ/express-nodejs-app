@@ -9,6 +9,6 @@ steps:
     - name: build
       image: d.ctdn.net/node
       commands:
-          - npm config set registry https://r.ctdn.net
-          - npm install
-          - npm run build
+          - yarn config set registry https://r.ctdn.net
+          - yarn
+          - yarn build
