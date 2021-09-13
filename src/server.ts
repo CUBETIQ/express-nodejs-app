@@ -11,7 +11,7 @@ const app = Express()
 const httpServer = createServer(app)
 
 info(
-    `Application server running on: ${hostId} at port: ${SERVER_PORT} and started at: ${startedAt}`
+    `Application server running on: ${hostId} at: http://0.0.0.0:${SERVER_PORT} and started at: ${startedAt}`
 )
 httpServer.listen(SERVER_PORT)
 
