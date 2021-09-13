@@ -1,7 +1,7 @@
 {
     "name": "@cubetiq/express-nodejs-app",
     "version": "1.0.0",
-    "description": "Express, Nodejs application for service",
+    "description": "Express, Nodejs application for micro-service",
     "main": "dist/app.js",
     "private": true,
     "scripts": {
