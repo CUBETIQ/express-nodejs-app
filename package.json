@@ -1,5 +1,5 @@
 {
-    "name": "express-nodejs-app",
+    "name": "@cubetiq/express-nodejs-app",
     "version": "1.0.0",
     "description": "Express, Nodejs application for service",
     "main": "dist/app.js",
