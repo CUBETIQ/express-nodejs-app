@@ -3,10 +3,12 @@
     "version": "1.0.0",
     "description": "Express, Nodejs application for service",
     "main": "dist/app.js",
+    "private": true,
     "scripts": {
         "start": "ts-node-dev --respawn --transpile-only src/app.ts",
         "build": "rm -rf dist && tsc",
-        "serve": "npm run build && node dist/app.js",
+        "serve": "yarn run build && node dist/app.js",
+        "bootstrap": "lerna bootstrap",
         "test": "echo \"Error: no test specified\" && exit 1"
     },
     "repository": {
@@ -33,12 +35,17 @@
         "lint-staged": "^11.1.2",
         "prettier": "2.3.2",
         "ts-node-dev": "^1.1.8",
-        "typescript": "^4.4.2"
+        "typescript": "^4.4.2",
+        "@types/node": "^16.9.1"
     },
     "dependencies": {
-        "express": "^4.17.1"
+        "express": "^4.17.1",
+        "@cubetiq/ts-common": "1.0.0"
     },
     "lint-staged": {
         "**/*": "prettier --write --ignore-unknown"
-    }
+    },
+    "workspaces": [
+        "packages/*"
+    ]
 }
