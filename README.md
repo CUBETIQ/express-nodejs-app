@@ -1,23 +1,30 @@
 # Express Nodejs App
-- Nodejs
-- Express
-- TypeScript
-- Prettier
-- ESLint
-- Docker
-- DroneCI
-- Lerna Support
 
-# Quick Start
-- Start
+-   Nodejs
+-   Express
+-   TypeScript
+-   Prettier
+-   ESLint
+-   Docker
+-   DroneCI
+-   Lerna Support
+
+# Quickstart
+
+-   Start
+
 ```shell
 yarn start
 ```
-- Navigate
+
+-   Navigate
+
 ```shell
 curl http://localhost:3000
 ```
-- Response
+
+-   Response
+
 ```json
 {
     "startedAt": "2021-09-13T13:21:04.184Z",
@@ -25,5 +32,7 @@ curl http://localhost:3000
     "status": "OK"
 }
 ```
+
 ### Contributors
-- Sambo Chea <sombochea@cubetiqs.com>
+
+-   Sambo Chea <sombochea@cubetiqs.com>
