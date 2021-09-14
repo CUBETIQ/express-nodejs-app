@@ -24,6 +24,7 @@
     "license": "ISC",
     "devDependencies": {
         "@types/express": "^4.17.13",
+        "@types/node": "^16.9.1",
         "@typescript-eslint/eslint-plugin": "^4.30.0",
         "@typescript-eslint/parser": "^4.30.0",
         "dotenv": "^10.0.0",
@@ -36,12 +37,12 @@
         "lint-staged": "^11.1.2",
         "prettier": "2.3.2",
         "ts-node-dev": "^1.1.8",
-        "typescript": "^4.4.2",
-        "@types/node": "^16.9.1"
+        "typescript": "^4.4.2"
     },
     "dependencies": {
+        "@cubetiq/ts-common": "1.0.0",
         "express": "^4.17.1",
-        "@cubetiq/ts-common": "1.0.0"
+        "reflect-metadata": "^0.1.13"
     },
     "lint-staged": {
         "**/*": "prettier --write --ignore-unknown"
