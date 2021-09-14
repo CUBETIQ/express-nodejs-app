@@ -8,6 +8,7 @@
 -   Docker
 -   DroneCI
 -   Lerna Support
+-   Support decorators
 
 # Quickstart
 
@@ -20,7 +21,7 @@ yarn start
 -   Navigate
 
 ```shell
-curl http://localhost:3000
+curl http://localhost:3000/info
 ```
 
 -   Response
@@ -31,6 +32,55 @@ curl http://localhost:3000
     "message": "Instance id: presenter#143470",
     "status": "OK"
 }
+```
+
+# Quick Register Controller
+
+-   Add new controller `src/controller/home.controller.ts`
+
+```typescript
+import { Request, Response } from "express"
+import Controller from "../decorators/controller.decorator"
+import { Get, Post } from "../decorators/handlers.decorator"
+
+const data: any[] = []
+
+@Controller("/home")
+export default class HomeController {
+    constructor() {}
+
+    @Get()
+    public get(req: Request, res: Response) {
+        res.json(data)
+    }
+
+    @Post()
+    public create(req: Request, res: Response) {
+        const body = req.body
+        if (body == null) {
+            return res.status(400).json({
+                status: 400,
+                message: "Data is required",
+            })
+        }
+
+        data.push(body)
+        res.json({
+            message: "Data created successfully",
+            body: body,
+        })
+    }
+}
+```
+
+-   Register controller into index.ts `(src/controllers/index.ts)`
+
+```ts
+import IndexController from "./index.controller"
+import PersonController from "./person.controller"
+import HomeController from "./home.controller"
+
+export const controllers = [IndexController, PersonController, HomeController]
 ```
 
 ### Contributors
