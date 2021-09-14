@@ -10,4 +10,9 @@ export default class IndexController {
     public index(req: Request, res: Response) {
         res.send(`Hello Index`)
     }
+
+    @Get("/:name")
+    public hello(req: Request, res: Response) {
+        res.send(`Hello ${req.params.name}`)
+    }
 }

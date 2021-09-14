@@ -12,6 +12,8 @@ class Application {
 
     constructor() {
         this._instance = express()
+        this._instance.use(express.json())
+        this._instance.use(express.urlencoded({ extended: false }))
         this.registerRoutes()
     }
 
