@@ -12,6 +12,18 @@
 
 # Quickstart
 
+-   Clone repository
+
+```shell
+git clone https://git.cubetiqs.com/CUBETIQ/express-nodejs-app.git --recurse-submodules --remote-submodules
+```
+
+-   Install
+
+```shell
+yarn
+```
+
 -   Start
 
 ```shell
@@ -89,6 +101,20 @@ import PersonController from "./person.controller"
 import HomeController from "./home.controller"
 
 export const controllers = [IndexController, PersonController, HomeController]
+```
+
+-   Output registered routes
+
+```ts
+┌─────────┬──────────────────────┬─────────────────────────────────┐
+│ (index) │         api          │             handler             │
+├─────────┼──────────────────────┼─────────────────────────────────┤
+│    0    │     'GET /hello'     │     'IndexController.index'     │
+│    1    │  'GET /hello/:name'  │     'IndexController.hello'     │
+│    2    │    'GET /person'     │  'PersonController.getPersons'  │
+│    3    │    'POST /person'    │ 'PersonController.createPerson' │
+│    4    │ 'DELETE /person/:id' │ 'PersonController.deletePerson' │
+└─────────┴──────────────────────┴─────────────────────────────────┘
 ```
 
 ### Contributors
