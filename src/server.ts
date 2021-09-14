@@ -1,13 +1,13 @@
 import { createServer } from "http"
-import Express from "express"
 import { SERVER_PORT } from "./app.config"
 import { info } from "@cubetiq/ts-common/dist/log"
+import application from "./app/application"
 
 // get current host id
 const hostId = `${require("os").hostname()}#${process.pid}`
 const startedAt = new Date()
 
-const app = Express()
+const app = application.instance
 const httpServer = createServer(app)
 
 info(
@@ -15,7 +15,7 @@ info(
 )
 httpServer.listen(SERVER_PORT)
 
-app.get("/", (req, res) => {
+app.get("/info", (req, res) => {
     res.type("json")
     res.send({
         startedAt,
