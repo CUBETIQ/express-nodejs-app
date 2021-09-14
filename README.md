@@ -41,7 +41,7 @@ curl http://localhost:3000/info
 ```typescript
 import { Request, Response } from "express"
 import Controller from "../decorators/controller.decorator"
-import { Get, Post } from "../decorators/handlers.decorator"
+import { Get, Post, Delete } from "../decorators/handlers.decorator"
 
 const data: any[] = []
 
@@ -68,6 +68,14 @@ export default class HomeController {
         res.json({
             message: "Data created successfully",
             body: body,
+        })
+    }
+
+    @Delete("/:id")
+    public get(req: Request, res: Response) {
+        const id = req.params.id
+        res.json({
+            id: id,
         })
     }
 }

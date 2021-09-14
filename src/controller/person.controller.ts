@@ -1,6 +1,6 @@
 import { Request, Response } from "express"
 import Controller from "../decorators/controller.decorator"
-import { Post, Get } from "../decorators/handlers.decorator"
+import { Post, Get, Delete } from "../decorators/handlers.decorator"
 
 const persons: Array<any> = [
     {
@@ -30,6 +30,33 @@ export default class PersonController {
         persons.push(person)
         res.json({
             message: "Person created successfully",
+            body: person,
+        })
+    }
+
+    @Delete("/:id")
+    public deletePerson(req: Request, res: Response) {
+        const id = req.params.id
+
+        if (id == null) {
+            return res.status(400).json({
+                status: 400,
+                message: "Id is required",
+            })
+        }
+
+        const person = persons.find((person) => person.id === Number(id))
+
+        if (person == null) {
+            return res.status(404).json({
+                status: 404,
+                message: "Person not found",
+            })
+        }
+
+        persons.splice(persons.indexOf(person), 1)
+        res.json({
+            message: "Person deleted successfully",
             body: person,
         })
     }
