@@ -18,6 +18,18 @@
 git clone https://git.cubetiqs.com/CUBETIQ/express-nodejs-app.git --recurse-submodules --remote-submodules
 ```
 
+-   Update an existed repository
+
+```shell
+git submodule update --init --remote
+```
+
+-   Add Packages
+
+```shell
+mkdir packages && git submodule add https://git.cubetiqs.com/CUBETIQ/ts-common.git packages/ts-common
+```
+
 -   Install
 
 ```shell
