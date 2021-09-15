@@ -13,10 +13,10 @@ RUN apk update && \
 WORKDIR /app
 COPY . /app
 
-RUN npm config set registry https://r.ctdn.net
-RUN npm config get registry
-RUN npm install
-RUN npm run build
+RUN yarn config set registry https://r.ctdn.net
+RUN cd packages/ts-common && yarn && yarn build
+RUN cd ../../ && yarn
+RUN yarn build
 
 EXPOSE 3000
-CMD [ "npm" , "serve"]
+CMD [ "yarn" , "serve"]
