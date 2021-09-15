@@ -1,6 +1,5 @@
 import { Request, Response } from "express"
-import Controller from "../decorators/controller.decorator"
-import { Post, Get, Delete } from "../decorators/handlers.decorator"
+import { Controller, Delete, Get, Post } from "../decorators"
 
 const persons: Array<any> = [
     {

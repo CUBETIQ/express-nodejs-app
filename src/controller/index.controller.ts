@@ -1,6 +1,5 @@
 import { Request, Response } from "express"
-import Controller from "../decorators/controller.decorator"
-import { Get } from "../decorators/handlers.decorator"
+import { Controller, Get } from "../decorators"
 
 @Controller("/hello")
 export default class IndexController {
