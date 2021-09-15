@@ -7,7 +7,7 @@
     "scripts": {
         "start": "ts-node-dev --respawn --transpile-only src/app.ts",
         "build": "rm -rf dist && tsc",
-        "serve": "yarn run build && node dist/app.js",
+        "serve": "yarn build && node dist/app.js",
         "bootstrap": "lerna bootstrap",
         "test": "echo \"Error: no test specified\" && exit 1",
         "prepare": "husky install"
