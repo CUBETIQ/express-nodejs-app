@@ -27,13 +27,13 @@ git submodule update --init --remote
 -   Add Packages
 
 ```shell
-mkdir packages && git submodule add https://git.cubetiqs.com/CUBETIQ/ts-common.git packages/ts-common
+mkdir packages && git submodule add https://git.cubetiqs.com/CUBETIQ/ts-common.git packages/ts-common && git submodule add https://git.cubetiqs.com/CUBETIQ/cubetiq-express-server.git packages/cubetiq-express-server
 ```
 
--   Install
+-   Install and Build Packages
 
 ```shell
-yarn
+yarn && npx lerna run build
 ```
 
 -   Start
