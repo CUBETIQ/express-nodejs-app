@@ -14,7 +14,7 @@ WORKDIR /app
 COPY . /app
 
 RUN yarn config set registry https://r.ctdn.net
-RUN yarn build
+RUN yarn && yarn build
 
 EXPOSE 3000
 CMD [ "yarn" , "serve"]
