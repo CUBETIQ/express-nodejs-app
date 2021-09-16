@@ -58,6 +58,12 @@ curl http://localhost:3000/info
 }
 ```
 
+# Build application
+
+```shell
+yarn build
+```
+
 # Quick Register Controller
 
 -   Add new controller `src/controller/home.controller.ts`
