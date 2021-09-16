@@ -64,8 +64,7 @@ curl http://localhost:3000/info
 
 ```typescript
 import { Request, Response } from "express"
-import Controller from "../decorators/controller.decorator"
-import { Get, Post, Delete } from "../decorators/handlers.decorator"
+import { Controller, Get, Post, Delete } from "../decorators"
 
 const data: any[] = []
 
