@@ -1,5 +1,10 @@
 import { Request, Response } from "express"
-import { Controller, Delete, Get, Post } from "../decorators"
+import {
+    Controller,
+    Delete,
+    Get,
+    Post,
+} from "@cubetiq/express-server/dist/decorators"
 
 const persons: Array<any> = [
     {

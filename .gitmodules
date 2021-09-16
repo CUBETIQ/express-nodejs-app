@@ -1,3 +1,6 @@
 [submodule "packages/ts-common"]
 	path = packages/ts-common
 	url = https://git.cubetiqs.com/CUBETIQ/ts-common.git
+[submodule "packages/cubetiq-express-server"]
+	path = packages/cubetiq-express-server
+	url = https://git.cubetiqs.com/CUBETIQ/cubetiq-express-server.git

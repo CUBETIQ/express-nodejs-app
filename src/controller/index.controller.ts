@@ -1,5 +1,5 @@
 import { Request, Response } from "express"
-import { Controller, Get } from "../decorators"
+import { Controller, Get } from "@cubetiq/express-server/dist/decorators"
 
 @Controller("/hello")
 export default class IndexController {

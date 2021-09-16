@@ -18,7 +18,8 @@
     },
     "keywords": [
         "Express",
-        "Nodejs"
+        "Nodejs",
+        "Typescript"
     ],
     "author": "Sambo Chea <sombochea@cubetiqs.com>",
     "license": "ISC",
@@ -41,8 +42,8 @@
     },
     "dependencies": {
         "@cubetiq/ts-common": "1.0.0",
-        "express": "^4.17.1",
-        "reflect-metadata": "^0.1.13"
+        "@cubetiq/express-server": "1.0.0",
+        "express": "^4.17.1"
     },
     "lint-staged": {
         "**/*": "prettier --write --ignore-unknown"
