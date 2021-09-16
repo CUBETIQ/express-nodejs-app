@@ -14,8 +14,6 @@ WORKDIR /app
 COPY . /app
 
 RUN yarn config set registry https://r.ctdn.net
-RUN cd packages/ts-common && yarn && yarn build
-RUN cd ../../ && yarn
 RUN yarn build
 
 EXPOSE 3000
